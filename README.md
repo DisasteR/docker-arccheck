@@ -11,13 +11,13 @@ tools included :
 ## Usage :
 
 ### arcconf
-`docker run --rm --privileged -it akito42/docker-arcconf arcconf GETCONFIG`
+`docker run --rm --privileged -it akit042/docker-arccheck arcconf GETCONFIG`
 
 ### check_adaptec_raid
-`docker run --rm --privileged -it akito42/docker-arcconf check_adaptec_raid -Tw 40 -Tc 50 -LD 0,1 -PD 1 -z 0`
+`docker run --rm --privileged -it akit042/docker-arccheck check_adaptec_raid -Tw 40 -Tc 50 -LD 0,1 -PD 1 -z 0`
 
 ### arccheck
-`docker run --rm --privileged -it akito42/docker-arcconf arccheck -telegramtoken XXXXXXX:XXXXXXXXXXXXXXX -telegramid YYYYYYYY -commandargs '-Tw 40 -Tc 50 -LD 0,1 -PD 1 -z 0' -poolinginterval 10`
+`docker run --rm --privileged -it akit042/docker-arccheck arccheck -telegramtoken XXXXXXX:XXXXXXXXXXXXXXX -telegramid YYYYYYYY -commandargs '-Tw 40 -Tc 50 -LD 0,1 -PD 1 -z 0' -poolinginterval 10`
 
 ```
 Usage of arccheck:
