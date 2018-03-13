@@ -20,5 +20,5 @@ RUN apk add --no-cache perl && \
     apk add --no-cache --virtual=build-dependencies perl-utils build-base && \
     cpan install -y File::Which && \
     apk del --purge build-dependencies
-RUN wget https://raw.githubusercontent.com/thomas-krenn/check_adaptec_raid/master/check_adaptec_raid -O /usr/bin/check_adaptec_raid && \
+RUN wget https://raw.githubusercontent.com/DisasteR/check_adaptec_raid/case-fix/check_adaptec_raid -O /usr/bin/check_adaptec_raid && \
     chmod +x /usr/bin/check_adaptec_raid
