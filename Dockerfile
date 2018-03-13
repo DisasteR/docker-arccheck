@@ -16,7 +16,7 @@ FROM alpine:3.7
 LABEL maintainer "benj.saiz@gmail.com"
 COPY --from=downloader /tmp/linux_x64/static_arcconf/cmdline/arcconf /usr/bin/arcconf
 COPY --from=builder /go/src/arccheck/arccheck /usr/bin/arccheck
-RUN apk add --no-cache perl && \
+RUN apk add --no-cache perl ca-certificates && \
     apk add --no-cache --virtual=build-dependencies perl-utils build-base && \
     cpan install -y File::Which && \
     apk del --purge build-dependencies
