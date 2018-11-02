@@ -1,7 +1,7 @@
 FROM alpine:3.7 as downloader
 RUN wget http://download.adaptec.com/raid/storage_manager/arcconf_v2_05_22932.zip -O /tmp/arcconf_v2_05_22932.zip && \
     unzip /tmp/arcconf_v2_05_22932.zip -d /tmp && \
-    chmod +x /tmp/linux_x64/static_arcconf/cmdline/arcconf
+    chmod +x /tmp/linux_x64/cmdline/arcconf
 
 
 FROM golang:1.10-alpine as builder
