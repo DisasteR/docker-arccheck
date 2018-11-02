@@ -17,6 +17,7 @@ LABEL maintainer "benj.saiz@gmail.com"
 COPY --from=downloader /tmp/linux_x64/cmdline/arcconf /usr/bin/arcconf
 COPY --from=builder /go/src/arccheck/arccheck /usr/bin/arccheck
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends wget ca-certificates libfile-which-perl
+    apt-get install -y --no-install-recommends wget ca-certificates libfile-which-perl && \
+    rm -rf /var/lib/apt/lists/*
 RUN wget https://raw.githubusercontent.com/DisasteR/check_adaptec_raid/case-fix/check_adaptec_raid -O /usr/bin/check_adaptec_raid && \
     chmod +x /usr/bin/check_adaptec_raid
